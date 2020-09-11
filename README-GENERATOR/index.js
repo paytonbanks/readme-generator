@@ -1,17 +1,10 @@
-const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
+const inquirer = require('inquirer');
+
 const { prompt } = require("inquirer");
 
-// The built-in util package can be used to create Promise-based versions of functions using node style callbacks
-const readFileAsync = util.promisify(fs.readFile);
-const writeFileAsync = util.promisify(fs.writeFile);
-
-
-
-
-
-// array of questions for user
+console.log('PLEASE BEGIN BY ANSWERING THE FIRST QUESTION');
 
 const questions = [
 
@@ -28,7 +21,7 @@ const questions = [
     {
         type: "input",
         name: "installation",
-        message: "Installations instructions to follow:"
+        message: "What are the instructions to follow?"
     },
     {
         type: "input",
@@ -37,16 +30,15 @@ const questions = [
     },
     {
         type: "list",
-        message: "Select a license",
-        name: "License Types",
+        name: "license",
         choices: [
-            "Other1",
+            "APACHE",
             "Other2",
             "Other3",
             "MIT",
             "Other5"
-            
-        ]
+        ],
+        message: "Select a license from below"
     },
     {
         type: "input",
@@ -60,45 +52,78 @@ const questions = [
     },
     {
         type: "input",
-        name: "tests",
-        message: "Run test here"
+        name: "test",
+        message: "How do you run test on the project?"
     },
     {
         type: "input",
-        name: "tests",
-        message: "Run test here"
+        name: "username",
+        message: "What is your Github username?"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "What is your email in Github?"
     }
+
 ];
 
+
+///// THIS WAS THE GENERATOR MARKDOWN JS //
 function generateMarkdown(data) {
+
+    return `
     
-    return 
+    # ${data.title}
 
+    > ${data.description}
 
-};
+    ## Table of Contents
+    * [Installation](#installation)
+    * [Installation](#usage)
+    * [Installation](#license)
+    * [Installation](#contributing)
+    * [Installation](#tests)
+    * [Installation](#questions)
+   
+    # Installation
+    ${data.installation}
+   
+    ## Usage
+    ${data.usage}
+   
+    ## Licensing
+    ${data.license}   
 
-// function writeToFile("READMe.md", data) {
-//     fs.writeToFile(fileName, data, err => {
-//         if (err) console.log(err);
-//         console.log("Sucess!");
-//     });    
-// }
+    ## Contribution
+    ${data.contributing}
+   
+    ## Testing
+    ${data.tests}
+
+    ${data.questions}
+    
+    ## Badges
+    
+    ## Contact Info
+    [GitHub](http://github.com-${data.email}!)
+
+`};
 
 function init() {
     prompt(questions).then(input => {
 
         const response = generateMarkdown(input);
+        console.log(input.description);
 
-        fs.writeToFile("READMe.md", response, err => {
+        fs.writeFile("README.md", response, err => {
             if (err) {
                 throw err;
+                console.log(`Successful`)
+            }
 
-            }    
-    
         })
-   
     });
-
 }
 
 init();
