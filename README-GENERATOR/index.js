@@ -1,83 +1,93 @@
+const inquirer = require('inquirer');
+const fs = require('fs');
+const util = require('util');
+
+// The built-in util package can be used to create Promise-based versions of functions using node style callbacks
+const readFileAsync = util.promisify(fs.readFile);
+const writeFileAsync = util.promisify(fs.writeFile);
+
 // array of questions for user
-const questions = [
+function promptUser() {
+    const questions = [
 
-    {
-        type: "input",
-        name: "??? ",
-        message: " "
-    },
-    {
-        type: "input",
-        name: "title",
-        message: "What is the title of your project?"
-    },
-    {
-        type: "input",
-        name: "description",
-        message: "Write a description of your project."
-    },
-    {
-        type: "input",
-        name: "installation",
-        message: "Installations instructions to follow:"
-    },
-    {
-        type: "input",
-        name: "usage ",
-        message: "Describe the usage."
-    },
-    {
-        type: "list",
-        message: "Select a license",
-        name: "License Types",
-        choices: [
-            "Other1",
-            "Other2",
-            "Other3",
-            "MIT",
-            "Other5"
-            
-        ]
-    },
-    {
-        type: "input",
-        name: "contributing",
-        message: "What are the rules for contributing?"
-    },
-    {
-        type: "input",
-        name: "authors",
-        message: "Who are the authors? "
-    },
-    {
-        type: "input",
-        name: "tests",
-        message: "Run test here"
-    },
-    {
-        type: "input",
-        name: "tests",
-        message: "Run test here"
-    },
-    
-]
-
-// function to write README file
-function writeToFile(fileName, data) {
-    writeFile(fileName, data, err => {
-        if (err) {
-            throw err;
-        }
-    });
+        {
+            type: "input",
+            name: "??? ",
+            message: " "
+        },
+        {
+            type: "input",
+            name: "title",
+            message: "What is the title of your project?"
+        },
+        {
+            type: "input",
+            name: "description",
+            message: "Write a description of your project."
+        },
+        {
+            type: "input",
+            name: "installation",
+            message: "Installations instructions to follow:"
+        },
+        {
+            type: "input",
+            name: "usage ",
+            message: "Describe the usage."
+        },
+        {
+            type: "list",
+            message: "Select a license",
+            name: "License Types",
+            choices: [
+                "Other1",
+                "Other2",
+                "Other3",
+                "MIT",
+                "Other5"
+                
+            ]
+        },
+        {
+            type: "input",
+            name: "contributing",
+            message: "What are the rules for contributing?"
+        },
+        {
+            type: "input",
+            name: "authors",
+            message: "Who are the authors? "
+        },
+        {
+            type: "input",
+            name: "tests",
+            message: "Run test here"
+        },
+        {
+            type: "input",
+            name: "tests",
+            message: "Run test here"
+        },
+        
+    ]
 }
+// // function to write README file
+// function writeToFile(fileName, data) {
+//     writeFile(fileName, data, err => {
+//         if (err) {
+//             throw err;
+//         }
+//     });
+// }
 
 // function to initialize program
 function init() {
-    prompt(questions).then(answers => {
+    
+        const response = promptUser();
 
-        const response = generatedMarkdown(answers);
-        console.log(answers);
-    })
+        console.log("Success!");
+        
+
 
 }
 
@@ -87,46 +97,46 @@ init();
 
 
 
-// READ //
-// fs is a Node standard library package for reading and writing files
-var fs = require("fs");
+// // READ //
+// // fs is a Node standard library package for reading and writing files
+// var fs = require("fs");
 
-// return the contents of 'data.csv' as a string in the variable "data"
-// "utf8" encodes the raw buffer data in human-readable format
-fs.readFile("data.csv", "utf8", function(error, data) {
+// // return the contents of 'data.csv' as a string in the variable "data"
+// // "utf8" encodes the raw buffer data in human-readable format
+// fs.readFile("data.csv", "utf8", function(error, data) {
 
-  if (error) {
-    return console.log(error);
-  }
+//   if (error) {
+//     return console.log(error);
+//   }
 
-  console.log(data);
+//   console.log(data);
 
-});
+// });
 
-// WRITE TO A FILE //
+// // WRITE TO A FILE //
 
-var fs = require("fs");
+// var fs = require("fs");
 
-fs.writeFile("log.txt", process.argv[2], function(err) {
+// fs.writeFile("log.txt", process.argv[2], function(err) {
 
-  if (err) {
-    return console.log(err);
-  }
+//   if (err) {
+//     return console.log(err);
+//   }
 
-  console.log("Success!");
+//   console.log("Success!");
 
-});
-var fs = require("fs");
-const { off } = require("process");
+// });
+// var fs = require("fs");
+// const { off } = require("process");
 
-// APPEND //
+// // APPEND //
 
-fs.appendFile("log.txt", process.argv[2] + '\n', function(err) {
+// fs.appendFile("log.txt", process.argv[2] + '\n', function(err) {
 
-    if (err) {
-        console.log(err);
-    }
-    else {
-        console.log("Commit logged!");
-    }
-});
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log("Commit logged!");
+//     }
+// });
