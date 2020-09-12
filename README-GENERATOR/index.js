@@ -68,47 +68,56 @@ const questions = [
 
 ];
 
+// _______ README MARKDOWN DESIGN ___________ //
 
-///// THIS WAS THE GENERATOR MARKDOWN JS //
 function generateMarkdown(data) {
 
-    return `
+return `
     
-    # ${data.title}
+# ${data.title}
+================
 
-    > ${data.description}
+## DESCRIPTION
+${data.description}
 
-    ## Table of Contents
-    * [Installation](#installation)
-    * [Installation](#usage)
-    * [Installation](#license)
-    * [Installation](#contributing)
-    * [Installation](#tests)
-    * [Installation](#questions)
-   
-    # Installation
-    ${data.installation}
-   
-    ## Usage
-    ${data.usage}
-   
-    ## Licensing
-    ${data.license}   
+## TABLE OF CONTENTS
+-----
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributions](#contributing)
+* [Test](#tests)
+* [Questions](#questions)
 
-    ## Contribution
-    ${data.contributing}
-   
-    ## Testing
-    ${data.tests}
+## INSTALLASTION
+${data.installation}
 
-    ${data.questions}
-    
-    ## Badges
-    
-    ## Contact Info
-    [GitHub](http://github.com-${data.email}!)
+## USAGE
+${data.usage}
 
-`};
+## LICENSING
+${data.license}   
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+
+## CONTRIBUTION
+${data.contributing}
+
+## TESTING
+${data.tests}
+
+
+## BADGES
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+
+
+## CONTACT INFO
+${data.name}
+>email: ${data.email}
+>github: http://github.com/${data.email}
+
+
+`
+};
 
 function init() {
     prompt(questions).then(input => {
