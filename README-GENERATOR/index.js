@@ -123,7 +123,7 @@ function init() {
     prompt(questions).then(input => {
 
         const response = generateMarkdown(input);
-        console.log(input.description);
+        console.log("Enjoy the README. Please use us again!");
 
         fs.writeFile("README.md", response, err => {
             if (err) {
