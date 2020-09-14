@@ -42,20 +42,6 @@ A command-line application for the quick and easy generation of a project README
 
 3. Once inquirer is installed run the final command: [npm install](https://www.npmjs.com/package/npm-install). If there are not notifications of known "errors" the the installation is not complete until the terminal command line has returned to the root folder. 
 <br>
-#### PROGRAMMING: *Core Functions*  
-
-
-```javascript
-    Writing to Files ________________________
-    function test() {
-    console.log("Message to Usser");
-    }
-
-    Document Automation _______________________
-    const response = generateMarkdown(input);
-
-```
-<br>
 
 ## License 
 MIT License
