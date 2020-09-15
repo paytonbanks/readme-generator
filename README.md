@@ -17,20 +17,27 @@
 A command-line application for the quick and easy generation of a project README. The importance of a quality README is often undermentioned among web developers and the opportunity to provide application specific content is missed. *ARA* will render a complete README with the below table of contents. 
 <br>
 
-<img src="README-GENERATOR/images/gif3.gif" alt="start screen" width="89%" height="350" /> 
-<br>
 
 ## Usage
-*PROGRAM START* 
+
+
+### *Easy to Begin*
+<img src="README-GENERATOR/images/readmebegin.gif" alt="start screen" width="87%" height="350" />
 <br>
-> <img src="README-GENERATOR/images/start.png" alt="start screen" width="300" height="175" /> <img src="README-GENERATOR/images/mid.png" alt="hilight text" width="300" height="175" />  <img src="README-GENERATOR/images/closing of app.png" alt="" width="300" height="175" /> <img src="README-GENERATOR/images/file.png" alt="tree file location" width="300" height="175" /> 
+
+### *Easy to Finsh*
+<img src="README-GENERATOR/images/readmefinal.gif" alt="start screen" width="87%" height="350" />
 <br>
+
+[*Full Video*](https://drive.google.com/file/d/1oUyVv3ToBvc9qYHKCgWUjnRa3g5sbExL/view)
+
 
 ## Installation
  [VS Code Code](https://code.visualstudio.com/download) <br>
  [Node.js](https://nodejs.org/en/download) <br>
  [npm/cli](https://github.com/npm/cli/releases/tag/v6.14.8)
 <br>
+
     
 #### Installation Instructions:
 1. From the project's root directory, open a intergraged terminal and run: [npm init](https://docs.npmjs.com/cli/init) next a package.json file will be created in the project folder.

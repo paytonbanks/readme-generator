@@ -1,10 +1,10 @@
 
     
-# PROJECT V8
+# AUTOMATIC README APPLICATION
 ================
 
 ## DESCRIPTION
-	KSKSKSKSKS
+A command-line application for the quick and easy generation of a project README. The importance of a quality README is often undermentioned among web developers and the opportunity to provide application specific content is missed. *ARA* will render a complete README with the below table of contents. 
 
 ## TABLE OF CONTENTS
 -----
@@ -12,11 +12,11 @@
 * [Usage](#usage)
 * [License](#license)
 * [Contributions](#contributing)
-* [Test](#tests)
+* [Testing](#tests)
 * [Questions](#questions)
 
 ## INSTALLASTION
-kdjsljflsjf
+First from the terminal command line enter: node index.js.  Then answer each of the prompted questions and you are done. Then you can view the generated README from the the local project folder.
 
 ## USAGE
 undefined
@@ -26,7 +26,7 @@ MIT
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## CONTRIBUTION
-s;fk;skfsfk;fs
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## TESTING
 undefined
@@ -38,7 +38,7 @@ undefined
 
 ## CONTACT INFO
 undefined
->email: afaf
->github: http://github.com/afaf
+>email: payton.banks@gmail.com \
+>github: http://github.com/payton.banks@gmail.com
 
 
