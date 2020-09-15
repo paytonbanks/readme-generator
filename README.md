@@ -1,6 +1,6 @@
 # AUTOMATIC README APPLICATION
 ----
->>>>>                GENERATE README FILES FROM THE COMMAND LINE >>>>>>>>>>>>> |
+>>>>>>>          <<< README AUTOMATION >>>
 <br>
 
 
@@ -8,20 +8,17 @@
 * [Description](#description)
 * [Usage](#usage)
 * [Installation](#installation)
+* [Instructions](#instructions)
 * [License](#license)
 * [Author](#questions)
 * [Questions](#questions)
 
 ## Description
 A command-line application for the quick and easy generation of a project README. The importance of a quality README is often undermentioned among web developers and the opportunity to provide application specific content is missed. *ARA* will render a complete README with the below table of contents. 
-
-
-
-
 <br>
+
 <img src="README-GENERATOR/images/gif3.gif" alt="start screen" width="89%" height="350" /> 
 <br>
-
 
 ## Usage
 *PROGRAM START* 
@@ -35,14 +32,18 @@ A command-line application for the quick and easy generation of a project README
  [npm/cli](https://github.com/npm/cli/releases/tag/v6.14.8)
 <br>
     
-### Instructions:
+#### Installation Instructions:
 1. From the project's root directory, open a intergraged terminal and run: [npm init](https://docs.npmjs.com/cli/init) next a package.json file will be created in the project folder.
  
 2. Within the package.json file, confirm that the *inquier desendencies* were installed, if not run: [npminstall inquirer](https://www.npmjs.com/package/inquirer) in the same root directory as the init.
 
 3. Once inquirer is installed run the final command: [npm install](https://www.npmjs.com/package/npm-install). If there are not notifications of known "errors" the the installation is not complete until the terminal command line has returned to the root folder. 
 <br>
-
+## Instructions
+1. From the terminal command line:
+node index.js
+2. Answer each of the promted questions.
+3. Retreve generated README from the the local project folder.
 ## License 
 MIT License
 ## Author

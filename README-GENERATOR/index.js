@@ -33,10 +33,9 @@ const questions = [
         name: "license",
         choices: [
             "APACHE",
-            "Other2",
-            "Other3",
+            "BSD",
             "MIT",
-            "Other5"
+            "SDI"
         ],
         message: "Select a license from below"
     },
