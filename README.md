@@ -46,15 +46,19 @@ A command-line application for the quick and easy generation of a project README
 
 3. Once inquirer is installed run the final command: [npm install](https://www.npmjs.com/package/npm-install). If there are not notifications of known "errors" the the installation is not complete until the terminal command line has returned to the root folder. 
 <br>
+
 ## Instructions
 1. From the terminal command line:
 node index.js
 2. Answer each of the promted questions.
 3. Retreve generated README from the the local project folder.
+
 ## License 
 MIT License
+
 ## Author
 Payton Banks
+
 ## Questions:
 
 > [GitHub](https://github.com/${data.questions}) <br>

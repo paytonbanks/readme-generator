@@ -3,6 +3,7 @@
 # AUTOMATIC README APPLICATION
 ================
 
+
 ## DESCRIPTION
 A command-line application for the quick and easy generation of a project README. The importance of a quality README is often undermentioned among web developers and the opportunity to provide application specific content is missed. *ARA* will render a complete README with the below table of contents. 
 
