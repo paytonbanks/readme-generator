@@ -19,7 +19,7 @@ A command-line application for the quick and easy generation of a project README
 First from the terminal command line enter: node index.js.  Then answer each of the prompted questions and you are done. Then you can view the generated README from the the local project folder.
 
 ## USAGE
-undefined
+A command line README generator.
 
 ## LICENSING
 MIT   
@@ -29,7 +29,7 @@ MIT
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## TESTING
-undefined
+Testing is application dependent.
 
 
 ## BADGES

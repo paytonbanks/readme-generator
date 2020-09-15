@@ -25,7 +25,7 @@ const questions = [
     },
     {
         type: "input",
-        name: "usage ",
+        name: "usage",
         message: "Describe the usage."
     },
     {
@@ -102,7 +102,7 @@ ${data.license}
 ${data.contributing}
 
 ## TESTING
-${data.tests}
+${data.test}
 
 
 ## BADGES
